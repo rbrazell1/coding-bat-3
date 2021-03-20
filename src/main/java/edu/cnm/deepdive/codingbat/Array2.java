@@ -1,5 +1,7 @@
 package edu.cnm.deepdive.codingbat;
 
+import static java.util.Arrays.stream;
+
 public class Array2 {
 
   public int countEvens(int[] nums) {
@@ -8,14 +10,17 @@ public class Array2 {
       if (nums[i] % 2 == 0) {
         evenCount++;
       }
-      return evenCount;
-
     }
-    return 0; // TODO Compute & return value as specified in https://codingbat.com/prob/p162010.
+    return evenCount;
   }
 
-  public int centeredAverage(int[] nums) {
-    return 0; // TODO Compute & return value as specified in https://codingbat.com/prob/p136585.
+  public int centeredAverage(int[] numsC) {
+    int mean = 0;
+    stream(numsC).sequential() -= numsC[0] - numsC[numsC.length + 1];
+    for (int i = 0; i < numsC.length; i++) {
+      mean += numsC[i];
+    }
+    mean /= numsC.length;
+    return mean;
   }
-
 }
