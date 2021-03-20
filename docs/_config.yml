@@ -1,0 +1,10 @@
+remote_theme: ddc-java/ddc-day
+title: CodingBat Problem Set 3
+description: "Intermediate practice problems"
+assignment_url: https://classroom.github.com/a/fxuUQMg1
+repository_link: 
+  enabled: false
+page_navigator:
+  enabled: false
+titles_from_headings:
+  enabled: false
