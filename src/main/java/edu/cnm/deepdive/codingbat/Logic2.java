@@ -25,7 +25,7 @@ public class Logic2 {
     if ((goal %big|small) == 0) {
       return true;
     }
-    if ((goal %big|small) == 0 & goal %big == 0 & goal %small == 0) {
+    if (goal %(big|small + big|small) == 0) {
       return true;
     }
     return false;
