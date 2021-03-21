@@ -17,7 +17,18 @@ public class Logic2 {
   }
 
   public boolean makeBricks(int small, int big, int goal) {
-    return false; // TODO Compute & return value as specified in https://codingbat.com/prob/p183562.
+    int bigPart = 0;
+
+    if (goal %big == 0 || goal %small == 0) {
+      return true;
+    }
+    if ((goal %big|small) == 0) {
+      return true;
+    }
+    if ((goal %big|small) == 0 & goal %big == 0 & goal %small == 0) {
+      return true;
+    }
+    return false;
   }
 
 }
