@@ -17,18 +17,13 @@ public class Logic2 {
   }
 
   public boolean makeBricks(int small, int big, int goal) {
-    int bigPart = 0;
-
-    if (goal %big == 0 || goal %small == 0) {
-      return true;
+    if (goal > big * 5 + small) {
+      return false;
     }
-    if ((goal %big|small) == 0) {
-      return true;
+    if (goal % 5 > small) {
+      return false;
     }
-    if (goal %(big|small + big|small) == 0) {
-      return true;
-    }
-    return false;
+    return true;
   }
 
 }
