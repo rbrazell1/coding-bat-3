@@ -1,7 +1,5 @@
 package edu.cnm.deepdive.codingbat;
 
-import static java.util.Arrays.stream;
-
 public class Array2 {
 
   public int countEvens(int[] nums) {
@@ -15,11 +13,19 @@ public class Array2 {
   }
 
   public int centeredAverage(int[] numsC) {
-    int mean = 0;
-    for (int i = 0; i < numsC.length; i++) {
-      mean += numsC[i];
+    int smallest = Integer.MAX_VALUE;
+    int largest = Integer.MIN_VALUE;
+    int sum = 0;
+    for (int value : numsC) {
+      sum += value;
+      if (value > largest) {
+        largest = value;
+      }
+      if (value < smallest) {
+        smallest = value;
+      }
     }
-    mean /= numsC.length;
-    return mean;
+    sum -= smallest + largest;
+    return sum / (numsC.length - 2);
   }
 }
