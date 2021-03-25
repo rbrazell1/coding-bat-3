@@ -16,6 +16,14 @@ public class Logic2 {
     return winner;
   }
 
+  // Cleaner answer
+//  public int blackjack(int a, int b) {
+//    int hand1 = (a <= 21) ? a : 0;
+//    int hand2 = (a <= 21) ? b : 0;
+//    return Math.max(hand1, hand2);
+//  }
+
+
   public boolean makeBricks(int small, int big, int goal) {
     if (goal > big * 5 + small) {
       return false;
