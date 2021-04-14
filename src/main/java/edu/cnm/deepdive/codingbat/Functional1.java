@@ -1,13 +1,14 @@
 package edu.cnm.deepdive.codingbat;
 
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 public class Functional1 {
 
   public List<String> copies3(List<String> strings) {
-//    break the list into each member and duplicate three times total, then concat back, then add to new list
-    return strings;
-
+   strings = strings.stream()
+       .map((multi) -> multi + multi + multi)
+       .collect(Collectors.toList());
+   return strings;
   }
 }
