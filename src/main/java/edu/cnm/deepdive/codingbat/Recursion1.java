@@ -3,12 +3,12 @@ package edu.cnm.deepdive.codingbat;
 public class Recursion1 {
 
   public String changeXY(String str) {
-    char[] arrayOfString = str.toCharArray();
-    char position = char[position]
-    if ()
+    if (!str.isEmpty()) {
+      char firstChar = str.charAt(0);
+      return ((firstChar == 'x') ? 'y' : firstChar)
+          + changeXY(str.substring(1));
+    } else {
       return str;
     }
-
   }
-
 }

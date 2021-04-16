@@ -10,11 +10,7 @@ public class Map2 {
     for (int i = 0; i < strings.length; i++) {
       String key = strings[i];
       int value = map.getOrDefault(key, 0);
-      map.put(key, value++);
-      if (map.containsKey(key)) {
-        value++;
-        map.replace(key, value++);
-      }
+      map.put(key, ++value);
     }
     return map;
   }
