@@ -22,4 +22,11 @@ public class Map2 {
     return map;
   }
 
+  public Map<String, String> topping2(Map<String, String> map) {
+    map.replace("ice cream", "cherry");
+    map.replace("spinach", "nuts");
+    return map;
+
+  }
+
 }
