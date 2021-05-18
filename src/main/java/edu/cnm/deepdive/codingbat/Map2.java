@@ -23,7 +23,9 @@ public class Map2 {
   }
 
   public Map<String, String> topping2(Map<String, String> map) {
-    map.replace("ice cream", "cherry");
+    if (map.containsKey("ice cream")) {
+      map.putIfAbsent("yogurt", map.get("ice cream"));
+    }
     map.replace("spinach", "nuts");
     return map;
 
