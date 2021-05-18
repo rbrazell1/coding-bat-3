@@ -16,7 +16,10 @@ public class Map2 {
   }
 
   public Map<String, String> topping1(Map<String, String> map) {
-    return null;
+    map.replace("ice cream", "cherry");
+    map.replace("bread", "butter");
+    map.putIfAbsent("bread", "butter");
+    return map;
   }
 
 }
