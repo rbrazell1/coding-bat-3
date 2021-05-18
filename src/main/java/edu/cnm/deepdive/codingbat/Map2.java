@@ -14,5 +14,9 @@ public class Map2 {
     }
     return map;
   }
-}
 
+  public Map<String, String> topping1(Map<String, String> map) {
+    return null;
+  }
+
+}

@@ -2,7 +2,7 @@ package edu.cnm.deepdive.codingbat;
 
 public class LawnMower {
 
-  private String mowMe(int row, int col) {
+  private boolean mowMe(int row, int col) {
     int[][] lawn = new int[row][col];
     int[] rowMax = new int[row];
     int[] colMax = new int[col];
@@ -41,7 +41,7 @@ public class LawnMower {
       }
     }
 
-    return "YES";
+    return impossible;
   }
 
 }
