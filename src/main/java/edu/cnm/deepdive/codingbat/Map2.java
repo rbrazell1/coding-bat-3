@@ -32,7 +32,13 @@ public class Map2 {
   }
 
   public Map<String, String> topping3(Map<String, String> map) {
-
+    if (map.containsKey("potato")) {
+      map.putIfAbsent("fries", map.get("potato"));
+    }
+    if (map.containsKey("salad")) {
+      map.putIfAbsent("spinach", map.get("salad"));
+    }
+    return map;
   }
 
 }
