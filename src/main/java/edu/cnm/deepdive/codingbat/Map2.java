@@ -41,7 +41,7 @@ public class Map2 {
     return map;
   }
 
-  public Map<String, String> mapAB2(Map<String, String> map) {
+  public Map<String, String> mapAB(Map<String, String> map) {
 
 
     return map;
