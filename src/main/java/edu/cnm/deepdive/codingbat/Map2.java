@@ -58,7 +58,10 @@ public class Map2 {
   }
 
   public Map<String, String> mapAB3(Map<String, String> map) {
-
+    if (map.containsKey("a") || map.containsKey("b")) {
+      map.putIfAbsent("a", map.get("b"));
+      map.putIfAbsent("b", map.get("a"));
+    }
     return map;
   }
 
