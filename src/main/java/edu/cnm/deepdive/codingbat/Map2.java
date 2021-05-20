@@ -57,4 +57,9 @@ public class Map2 {
     return map;
   }
 
+  public Map<String, String> mapAB3(Map<String, String> map) {
+
+    return map;
+  }
+
 }
