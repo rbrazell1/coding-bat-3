@@ -50,7 +50,8 @@ public class Map2 {
 
   public Map<String, String> mapAB2(Map<String, String> map) {
     if (map.containsKey("a") && map.containsKey("b") &&
-        (map.get("a").equals(map.get("b")))) {
+        (map.get("a")
+            .equals(map.get("b")))) {
       map.remove("a");
       map.remove("b");
     }
@@ -66,7 +67,28 @@ public class Map2 {
   }
 
   public Map<String, String> mapAB4(Map<String, String> map) {
+    if (map.containsKey("a") && map.containsKey("b")) {
+      if (map.get("a")
+             .length() == map.get("b")
+                             .length()) {
+        map.put("a", "");
+        map.put("b", "");
+      } else {
+        map.replace("c",
+            map.get("a")
+               .length() > map.get("b")
+                              .length()
+                ? map.get("a")
+                : map.get("b"));
 
+        map.putIfAbsent("c",
+            map.get("a")
+               .length() > map.get("b")
+                              .length()
+                ? map.get("a")
+                : map.get("b"));
+      }
+    }
     return map;
   }
 
