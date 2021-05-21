@@ -104,7 +104,13 @@ public class Map2 {
   }
 
   public Map<String, String> mapShare(Map<String, String> map) {
-
+    if (map.containsKey("c")) {
+      map.remove("c");
+    }
+    if (map.containsKey("a")) {
+      map.replace("b", map.get("a"));
+      map.putIfAbsent("b", map.get("a"));
+    }
     return map;
   }
 
