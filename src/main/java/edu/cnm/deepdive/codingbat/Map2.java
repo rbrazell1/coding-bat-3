@@ -103,4 +103,9 @@ public class Map2 {
     return map;
   }
 
+  public Map<String, String> mapShare(Map<String, String> map) {
+
+    return map;
+  }
+
 }
