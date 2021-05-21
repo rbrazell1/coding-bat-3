@@ -95,7 +95,11 @@ public class Map2 {
   }
 
   public Map<String, String> mapBully(Map<String, String> map) {
-
+    if (map.containsKey("a")) {
+      map.replace("b", map.get("a"));
+      map.putIfAbsent("b", map.get("a"));
+      map.replace("a", "");
+    }
     return map;
   }
 
