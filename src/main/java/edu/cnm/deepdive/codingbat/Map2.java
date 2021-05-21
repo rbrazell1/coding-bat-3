@@ -15,6 +15,8 @@ public class Map2 {
     return map;
   }
 
+//  MAP1
+
   public Map<String, String> topping1(Map<String, String> map) {
     map.replace("ice cream", "cherry");
     map.replace("bread", "butter");
@@ -89,6 +91,11 @@ public class Map2 {
                 : map.get("b"));
       }
     }
+    return map;
+  }
+
+  public Map<String, String> mapBully(Map<String, String> map) {
+
     return map;
   }
 
