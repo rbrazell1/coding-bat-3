@@ -123,4 +123,13 @@ public class Map2 {
     return countMap;
   }
 
+  public Map<String, Integer> wordLen(String[] strings) {
+    Map<String, Integer> countMap = new HashMap<>(strings.length);
+    for (String s:
+        strings) {
+      countMap.putIfAbsent(s, s.length());
+    }
+    return countMap;
+  }
+
 }
