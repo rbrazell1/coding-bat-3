@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.codingbat;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,8 +8,7 @@ public class Map2 {
 
   public Map<String, Integer> wordCount(String[] strings) {
     Map<String, Integer> map = new HashMap<>(strings.length);
-    for (int i = 0; i < strings.length; i++) {
-      String key = strings[i];
+    for (String key : strings) {
       int value = map.getOrDefault(key, 0);
       map.put(key, ++value);
     }
@@ -116,6 +116,10 @@ public class Map2 {
 
   public Map<String, Integer> word0(String[] strings) {
     Map<String, Integer> countMap = new HashMap<>(strings.length);
+    for (String s:
+    strings) {
+    countMap.put(s, 0);
+    }
     return countMap;
   }
 
