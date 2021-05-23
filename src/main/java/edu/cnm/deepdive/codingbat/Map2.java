@@ -114,4 +114,9 @@ public class Map2 {
     return map;
   }
 
+  public Map<String, Integer> word0(String[] strings) {
+    Map<String, Integer> countMap = new HashMap<>(strings.length);
+    return countMap;
+  }
+
 }
