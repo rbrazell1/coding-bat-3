@@ -141,4 +141,13 @@ public class Map2 {
     return countMap;
   }
 
+  public Map<String, String> firstChar(String[] strings) {
+    Map<String, String> countMap = new HashMap<>(strings.length);
+    for (String s:
+        strings) {
+      countMap.put(s.substring(0, 1), );
+    }
+    return countMap;
+  }
+
 }
