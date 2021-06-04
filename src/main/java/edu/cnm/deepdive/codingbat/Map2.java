@@ -1,6 +1,5 @@
 package edu.cnm.deepdive.codingbat;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -116,16 +115,16 @@ public class Map2 {
 
   public Map<String, Integer> word0(String[] strings) {
     Map<String, Integer> countMap = new HashMap<>(strings.length);
-    for (String s:
-    strings) {
-    countMap.put(s, 0);
+    for (String s :
+        strings) {
+      countMap.put(s, 0);
     }
     return countMap;
   }
 
   public Map<String, Integer> wordLen(String[] strings) {
     Map<String, Integer> countMap = new HashMap<>(strings.length);
-    for (String s:
+    for (String s :
         strings) {
       countMap.putIfAbsent(s, s.length());
     }
@@ -134,7 +133,7 @@ public class Map2 {
 
   public Map<String, String> pairs(String[] strings) {
     Map<String, String> countMap = new HashMap<>(strings.length);
-    for (String s:
+    for (String s :
         strings) {
       countMap.put(s.substring(0, 1), s.substring(s.length() - 1));
     }
@@ -143,10 +142,15 @@ public class Map2 {
 
   public Map<String, String> firstChar(String[] strings) {
     Map<String, String> countMap = new HashMap<>(strings.length);
-
-    for (String s:
+    StringBuilder stringBuilder = new StringBuilder();
+    for (String s :
         strings) {
-      countMap.put(s.substring(0, 1), );
+      countMap.put(s.substring(0, 1), stringBuilder.toString());
+      if (countMap.containsKey(s.substring(0, 1)) && s.substring(0, 1)
+                                                      .equals(countMap.)) {
+        stringBuilder.append(s);
+        countMap.replace(s.substring(0, 1), stringBuilder.toString());
+      }
     }
     return countMap;
   }
